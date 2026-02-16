@@ -13,7 +13,7 @@ export default function MediaPreview({ data }) {
 
             <div className={`grid gap-4 ${data.media.length > 1 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-1 max-w-[300px] mx-auto'}`}>
                 {data.media.map((item, index) => (
-                    <div key={index} className="relative group bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <div key={index} className="relative group bg-black rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                         {item.type === 'video' ? (
                             <div className="aspect-[9/16] relative">
                                 <video

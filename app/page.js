@@ -146,17 +146,17 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-white mb-8 text-center">How to Download Instagram Reels & Photos</h2>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
-                    <div className="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
                         <div className="bg-violet-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-violet-400 font-bold text-xl">1</div>
                         <h3 className="text-xl font-semibold text-white mb-2">Copy Link</h3>
                         <p>Open Instagram, find the Reel or Photo you want to save, click the three dots/share icon and select "Copy Link".</p>
                     </div>
-                    <div className="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
                         <div className="bg-pink-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-pink-400 font-bold text-xl">2</div>
                         <h3 className="text-xl font-semibold text-white mb-2">Paste URL</h3>
                         <p>Return to InstaSaver and paste the link into the input field above. Select the correct tab (Reels or Photos).</p>
                     </div>
-                    <div className="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
                         <div className="bg-cyan-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-cyan-400 font-bold text-xl">3</div>
                         <h3 className="text-xl font-semibold text-white mb-2">Download</h3>
                         <p>Click the "Download" button. Wait for the processing to finish, then click the download button on the preview.</p>
@@ -166,8 +166,8 @@ export default function Home() {
                 <div className="border-t border-slate-800 pt-16">
                     <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
                     <div className="space-y-4 max-w-2xl mx-auto">
-                        <details className="group bg-slate-800/30 rounded-xl border border-slate-700/50 overflow-hidden">
-                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-slate-800/50 transition">
+                        <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
                                 Is InstaSaver free to use?
                                 <span className="transition group-open:rotate-180">▼</span>
                             </summary>
@@ -175,8 +175,8 @@ export default function Home() {
                                 Yes, InstaSaver is completely free to use. You can download as many Reels and Photos as you like without any cost.
                             </div>
                         </details>
-                        <details className="group bg-slate-800/30 rounded-xl border border-slate-700/50 overflow-hidden">
-                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-slate-800/50 transition">
+                        <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
                                 Do I need to login to Instagram?
                                 <span className="transition group-open:rotate-180">▼</span>
                             </summary>
@@ -184,8 +184,8 @@ export default function Home() {
                                 No, you do not need to log in to your Instagram account to use our downloader. Using a logged-in account is safer and more anonymous.
                             </div>
                         </details>
-                        <details className="group bg-slate-800/30 rounded-xl border border-slate-700/50 overflow-hidden">
-                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-slate-800/50 transition">
+                        <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
                                 Can I download from private accounts?
                                 <span className="transition group-open:rotate-180">▼</span>
                             </summary>
