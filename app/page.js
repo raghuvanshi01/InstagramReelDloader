@@ -85,8 +85,8 @@ export default function Home() {
 
             <div className="z-10 w-full max-w-2xl items-center justify-between font-mono text-sm flex-col">
                 <div className="text-center mb-12">
-                    <h1 className="text-5xl font-bold mb-4 tracking-tight text-white drop-shadow-lg">
-                        Insta<span className="gradient-text">Saver</span>
+                    <h1 className="text-5xl font-bold mb-4 tracking-tight drop-shadow-lg">
+                        <span className="gradient-text">Insta Saver</span>
                     </h1>
                     <p className="text-slate-400 text-lg">
                         Download Instagram Reels, Photos & Carousels.
