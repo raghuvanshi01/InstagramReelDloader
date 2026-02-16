@@ -143,28 +143,32 @@ export default function Home() {
 
             {/* SEO Content Section */}
             <section className="w-full max-w-4xl mt-24 text-slate-300">
-                <h2 className="text-3xl font-bold text-white mb-8 text-center">How to Download Instagram Reels & Photos</h2>
+                <h2 className="text-3xl font-bold mb-8 text-center drop-shadow-lg text-white">
+                    How to Download <span className="gradient-text">Instagram Reels & Photos</span>
+                </h2>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
-                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
-                        <div className="bg-violet-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-violet-400 font-bold text-xl">1</div>
-                        <h3 className="text-xl font-semibold text-white mb-2">Copy Link</h3>
-                        <p>Open Instagram, find the Reel or Photo you want to save, click the three dots/share icon and select "Copy Link".</p>
+                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm shadow-xl">
+                        <div className="bg-violet-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-violet-400 font-bold text-xl shadow-inner">1</div>
+                        <h3 className="text-xl font-semibold text-white mb-2 drop-shadow-md">Copy Link</h3>
+                        <p className="text-slate-200">Open Instagram, find the Reel or Photo you want to save, click the three dots/share icon and select "Copy Link".</p>
                     </div>
-                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
-                        <div className="bg-pink-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-pink-400 font-bold text-xl">2</div>
-                        <h3 className="text-xl font-semibold text-white mb-2">Paste URL</h3>
-                        <p>Return to InstaSaver and paste the link into the input field above. Select the correct tab (Reels or Photos).</p>
+                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm shadow-xl">
+                        <div className="bg-pink-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-pink-400 font-bold text-xl shadow-inner">2</div>
+                        <h3 className="text-xl font-semibold text-white mb-2 drop-shadow-md">Paste URL</h3>
+                        <p className="text-slate-200">Return to InstaSaver and paste the link into the input field above. Select the correct tab (Reels or Photos).</p>
                     </div>
-                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
-                        <div className="bg-cyan-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-cyan-400 font-bold text-xl">3</div>
-                        <h3 className="text-xl font-semibold text-white mb-2">Download</h3>
-                        <p>Click the "Download" button. Wait for the processing to finish, then click the download button on the preview.</p>
+                    <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm shadow-xl">
+                        <div className="bg-cyan-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-cyan-400 font-bold text-xl shadow-inner">3</div>
+                        <h3 className="text-xl font-semibold text-white mb-2 drop-shadow-md">Download</h3>
+                        <p className="text-slate-200">Click the "Download" button. Wait for the processing to finish, then click the download button on the preview.</p>
                     </div>
                 </div>
 
                 <div className="border-t border-slate-800 pt-16">
-                    <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-bold mb-8 text-center drop-shadow-lg text-white">
+                        Frequently Asked <span className="gradient-text">Questions</span>
+                    </h2>
                     <div className="space-y-4 max-w-2xl mx-auto">
                         <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
                             <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
