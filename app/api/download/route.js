@@ -56,27 +56,55 @@ export async function POST(request) {
                     console.error('yt-dlp error:', error);
                     console.error('yt-dlp stderr:', stderr);
 
-                    if (stderr.includes('Instagram API is not granting access') || stderr.includes('login')) {
+                    if (stderr.includes('Instagram API is not granting access') || stderr.includes('login') || stderr.includes('429')) {
                         resolve(NextResponse.json({ error: 'Instagram is blocking access from this server IP. Try running locally.' }, { status: 429 }));
                         return;
                     }
 
-                    resolve(NextResponse.json({ error: 'Failed to fetch video. Ensure the link is valid and public.' }, { status: 500 }));
+                    resolve(NextResponse.json({ error: 'Failed to fetch media. Ensure the link is valid and public.' }, { status: 500 }));
                     return;
                 }
 
                 try {
                     const output = JSON.parse(stdout);
 
+                    // Determine media type and structure
+                    let mediaType = 'video';
+                    let mediaList = [];
+
+                    // yt-dlp "entries" indicates a sidecar/carousel or playlist
+                    if (output.entries) {
+                        mediaType = 'carousel';
+                        mediaList = output.entries.map(entry => ({
+                            url: entry.url,
+                            thumbnail: entry.thumbnail,
+                            type: entry.vcodec === 'none' ? 'image' : 'video' // rudimentary check
+                        }));
+                    } else {
+                        // Single item
+                        // Check if it's strictly an image (no video codecs)
+                        if (output.vcodec === 'none' && output.ext !== 'mp4') {
+                            mediaType = 'image';
+                        }
+
+                        mediaList = [{
+                            url: output.url,
+                            thumbnail: output.thumbnail,
+                            type: mediaType
+                        }];
+                    }
+
                     resolve(NextResponse.json({
-                        videoUrl: output.url,
-                        thumbnail: output.thumbnail,
+                        type: mediaType,
+                        media: mediaList,
                         title: output.title,
-                        author: output.uploader
+                        author: output.uploader,
+                        author_url: output.uploader_url,
+                        description: output.description
                     }));
                 } catch (parseError) {
                     console.error('JSON parse error:', parseError);
-                    resolve(NextResponse.json({ error: 'Failed to parse video data' }, { status: 500 }));
+                    resolve(NextResponse.json({ error: 'Failed to parse media data' }, { status: 500 }));
                 }
             });
         });

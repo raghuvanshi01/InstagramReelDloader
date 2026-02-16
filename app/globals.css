@@ -2,14 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Premium Styles */
-:root {
-  --background: #0f172a; /* Slate 900 */
-  --foreground: #f8fafc; /* Slate 50 */
-  --primary: #8b5cf6; /* Violet 500 */
-  --primary-hover: #7c3aed; /* Violet 600 */
-  --secondary: #ec4899; /* Pink 500 */
-  --accent: #06b6d4; /* Cyan 500 */
+@layer base {
+  :root {
+    /* Default Theme (Purple/Pink - "Midnight") */
+    --background: 15 23 42;
+    /* Slate 900 */
+    --foreground: 248 250 252;
+    /* Slate 50 */
+    --primary: 139 92 246;
+    /* Violet 500 */
+    --secondary: 236 72 153;
+    /* Pink 500 */
+    --accent: 6 182 212;
+    /* Cyan 500 */
+  }
+
+  .theme-ocean {
+    --primary: 6 182 212;
+    /* Cyan 500 */
+    --secondary: 59 130 246;
+    /* Blue 500 */
+    --accent: 16 185 129;
+    /* Emerald 500 */
+  }
+
+  .theme-sunset {
+    --primary: 249 115 22;
+    /* Orange 500 */
+    --secondary: 239 68 68;
+    /* Red 500 */
+    --accent: 234 179 8;
+    /* Yellow 500 */
+  }
+
+  .theme-forest {
+    --primary: 34 197 94;
+    /* Green 500 */
+    --secondary: 20 184 166;
+    /* Teal 500 */
+    --accent: 163 230 53;
+    /* Lime 400 */
+  }
 }
 
 body {
