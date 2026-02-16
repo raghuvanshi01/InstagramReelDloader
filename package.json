@@ -1,0 +1,21 @@
+{
+  "name": "link-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@juliendu11/instagram-downloader": "^0.2.0",
+    "@sasmeee/igdl": "^0.0.1-security",
+    "instagram-url-direct": "^2.0.7",
+    "lucide-react": "^0.344.0",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "youtube-dl-exec": "^3.1.1"
+  }
+}
