@@ -85,7 +85,7 @@ export default function Home() {
 
             <div className="z-10 w-full max-w-2xl items-center justify-between font-mono text-sm flex-col">
                 <div className="text-center mb-12">
-                    <h1 className="text-5xl font-bold mb-4 tracking-tight">
+                    <h1 className="text-5xl font-bold mb-4 tracking-tight text-white drop-shadow-lg">
                         Insta<span className="gradient-text">Saver</span>
                     </h1>
                     <p className="text-slate-400 text-lg">
@@ -99,11 +99,11 @@ export default function Home() {
                 <div className="glass-card p-8 w-full">
                     <form onSubmit={handleDownload} className="flex flex-col gap-4">
                         <div className="relative">
-                            <LinkIcon className="absolute left-3 top-3.5 text-slate-400 w-5 h-5" />
+                            <LinkIcon className="absolute left-4 top-3.5 text-slate-400 w-5 h-5" />
                             <input
                                 type="text"
                                 placeholder={getPlaceholder()}
-                                className="input-field pl-10 mb-0"
+                                className="input-field pl-12 mb-0"
                                 value={url}
                                 onChange={(e) => setUrl(e.target.value)}
                             />
@@ -112,7 +112,7 @@ export default function Home() {
                         <button
                             type="submit"
                             disabled={loading || !url || cooldown > 0}
-                            className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider font-bold shadow-lg hover:shadow-xl transition-all"
                         >
                             {loading ? (
                                 <>
