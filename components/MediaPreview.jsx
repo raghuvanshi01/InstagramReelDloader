@@ -1,8 +1,14 @@
-import { Check, Download } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Check, Download, Info } from 'lucide-react';
 
 export default function MediaPreview({ data }) {
-    const handleDownload = async (mediaUrl, type) => {
+    const [downloadStarted, setDownloadStarted] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+
+    const handleDownload = async (mediaUrl, type, isAuto = false) => {
         try {
+            if (isAuto) setShowToast(true);
+
             const filename = `insta-saver-${type}-${Date.now()}.${type === 'video' ? 'mp4' : 'jpg'}`;
             // Use the proxy endpoint to force download
             const response = await fetch(`/api/proxy?url=${encodeURIComponent(mediaUrl)}&filename=${filename}`);
@@ -18,6 +24,10 @@ export default function MediaPreview({ data }) {
             a.click();
             window.URL.revokeObjectURL(url);
             document.body.removeChild(a);
+
+            if (isAuto) {
+                setTimeout(() => setShowToast(false), 3000);
+            }
         } catch (err) {
             console.error('Download failed, falling back to new tab', err);
             // Fallback to opening in new tab
@@ -25,10 +35,38 @@ export default function MediaPreview({ data }) {
         }
     };
 
+    useEffect(() => {
+        if (data && data.media && data.media.length > 0 && !downloadStarted) {
+            // Auto-download the first item
+            const firstItem = data.media[0];
+            handleDownload(firstItem.url, firstItem.type, true);
+            setDownloadStarted(true);
+        }
+    }, [data, downloadStarted]);
+
+    // Reset download status when data changes (e.g. new link)
+    useEffect(() => {
+        if (data) {
+            setDownloadStarted(false);
+        }
+    }, [data?.id]); // Assuming data has an ID or unique prop, otherwise rely on data object ref
+
     if (!data || !data.media || data.media.length === 0) return null;
 
     return (
-        <div className="w-full max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="w-full max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500 relative">
+            {/* Toast Notification */}
+            {showToast && (
+                <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 animate-in fade-in slide-in-from-top-4">
+                    <div className="glass-card px-6 py-3 rounded-full border border-green-500/30 flex items-center gap-3 shadow-2xl bg-slate-900/90 backdrop-blur-md">
+                        <div className="bg-green-500/20 p-1.5 rounded-full">
+                            <Download className="w-4 h-4 text-green-400" />
+                        </div>
+                        <span className="text-white text-sm font-medium">Download Started Automatically...</span>
+                    </div>
+                </div>
+            )}
+
             <div className="glass-card p-6 mb-8">
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-700/50">
                     <div className="bg-green-500/20 p-2 rounded-full">
@@ -37,7 +75,7 @@ export default function MediaPreview({ data }) {
                     <div>
                         <h3 className="text-xl font-semibold text-white">Ready to Download</h3>
                         <p className="text-xs text-slate-500 mt-1">
-                            Click download below. The file will save to your device.
+                            Your download should start automatically.
                         </p>
                     </div>
                 </div>
