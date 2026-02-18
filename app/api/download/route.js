@@ -71,6 +71,24 @@ export async function POST(request) {
                     // Determine media type and structure
                     let mediaType = 'video';
                     let mediaList = [];
+                    let audioInfo = null;
+
+                    // Extract best audio functionality
+                    if (output.formats) {
+                        // finding the best audio-only format (m4a usually best for instagram)
+                        const audioFormat = output.formats.find(f =>
+                            f.vcodec === 'none' && f.acodec !== 'none' && f.ext === 'm4a'
+                        ) || output.formats.find(f =>
+                            f.vcodec === 'none' && f.acodec !== 'none'
+                        );
+
+                        if (audioFormat) {
+                            audioInfo = {
+                                url: audioFormat.url,
+                                ext: audioFormat.ext || 'm4a'
+                            };
+                        }
+                    }
 
                     // yt-dlp "entries" indicates a sidecar/carousel or playlist
                     if (output.entries) {
@@ -97,6 +115,7 @@ export async function POST(request) {
                     resolve(NextResponse.json({
                         type: mediaType,
                         media: mediaList,
+                        audio: audioInfo,
                         title: output.title,
                         author: output.uploader,
                         author_url: output.uploader_url,

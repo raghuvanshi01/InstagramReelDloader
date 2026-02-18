@@ -103,7 +103,7 @@ export default function MediaPreview({ data }) {
                                 </div>
                             )}
 
-                            <div className="p-4 bg-slate-900/90 border-t border-slate-800">
+                            <div className="p-4 bg-slate-900/90 border-t border-slate-800 flex flex-col gap-2">
                                 <button
                                     onClick={() => handleDownload(item.url, item.type)}
                                     className="btn-primary w-full flex items-center justify-center gap-2 py-2.5 text-sm uppercase tracking-wide shadow-lg group-hover:translate-y-[-2px] transition-all"
@@ -115,6 +115,27 @@ export default function MediaPreview({ data }) {
                         </div>
                     ))}
                 </div>
+
+                {data.audio && (
+                    <div className="mt-6 p-4 bg-slate-800/50 rounded-xl border border-slate-700/50 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                            <div className="bg-violet-500/20 p-2 rounded-full">
+                                <span className="text-violet-400 font-bold text-xs">AUDIO</span>
+                            </div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Download Audio Only</h4>
+                                <p className="text-xs text-slate-500">Extract audio from this post ({data.audio.ext})</p>
+                            </div>
+                        </div>
+                        <button
+                            onClick={() => handleDownload(data.audio.url, 'audio')}
+                            className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-2"
+                        >
+                            <Download className="w-4 h-4" />
+                            Download Audio
+                        </button>
+                    </div>
+                )}
             </div>
 
             <div className="text-center">
