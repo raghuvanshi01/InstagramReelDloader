@@ -197,6 +197,33 @@ export default function Home() {
                                 No, currently we only support downloading media from public Instagram accounts to respect user privacy.
                             </div>
                         </details>
+                        <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
+                                Can I download Reels without watermark?
+                                <span className="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <div className="px-6 pb-6 text-slate-400">
+                                Yes! InstaSaver downloads Instagram Reels in their original quality without any watermarks. What you get is the exact same video that was uploaded.
+                            </div>
+                        </details>
+                        <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
+                                Does InstaSaver work on mobile?
+                                <span className="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <div className="px-6 pb-6 text-slate-400">
+                                Yes, InstaSaver works perfectly on all devices — iPhone, Android, tablets, and desktops. Just open instasaver.co.in in any browser and start downloading.
+                            </div>
+                        </details>
+                        <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+                            <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-white hover:bg-black/80 transition">
+                                What formats are supported?
+                                <span className="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <div className="px-6 pb-6 text-slate-400">
+                                We support downloading Instagram Reels (video/MP4), Photos (JPG), and Carousel posts (multiple images). Stories support is coming soon!
+                            </div>
+                        </details>
                     </div>
                 </div>
             </section>
@@ -204,9 +231,9 @@ export default function Home() {
             <footer className="mt-24 text-slate-500 text-sm border-t border-slate-800 w-full text-center pt-8">
                 <p className="mb-2">© {new Date().getFullYear()} InstaSaver. Not affiliated with Instagram/Meta.</p>
                 <div className="flex justify-center gap-4">
-                    <a href="#" className="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" className="hover:text-white transition">Terms of Service</a>
-                    <a href="#" className="hover:text-white transition">Contact</a>
+                    <a href="/faq" className="hover:text-white transition">FAQ</a>
+                    <a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a>
+                    <a href="/terms" className="hover:text-white transition">Terms of Service</a>
                 </div>
             </footer>
         </main>

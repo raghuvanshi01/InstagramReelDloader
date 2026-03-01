@@ -6,6 +6,6 @@ export default function robots() {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://instasaver.vercel.app/sitemap.xml',
+        sitemap: 'https://instasaver.co.in/sitemap.xml',
     }
 }
