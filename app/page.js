@@ -86,11 +86,11 @@ export default function Home() {
             <div className="z-10 w-full max-w-2xl items-center justify-between font-mono text-sm flex-col">
                 <div className="text-center mb-12">
                     <h1 className="text-5xl font-bold mb-4 tracking-tight drop-shadow-lg">
-                        <span className="gradient-text">Insta Saver</span>
+                        <span className="gradient-text">Instagram Reels Downloader</span>
                     </h1>
                     <p className="text-slate-400 text-lg">
-                        Download Instagram Reels, Photos, Highlights & Carousels.
-                        <br />Fast, free, and premium quality.
+                        Download Instagram Reels without watermark in HD quality.
+                        <br />Free, fast, no login required. Save Reels, Photos, Highlights & Carousels.
                     </p>
                 </div>
 

@@ -2,7 +2,7 @@ export default function JsonLd() {
     const appSchema = {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "InstaSaver",
+        "name": "InstaSaver - Instagram Reels Downloader Without Watermark",
         "url": "https://instasaver.co.in",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Web",
@@ -11,7 +11,7 @@ export default function JsonLd() {
             "price": "0",
             "priceCurrency": "USD"
         },
-        "description": "Download Instagram Reels, Photos, Highlights, and Carousels in high quality without watermarks. Free online tool — no login required."
+        "description": "Download Instagram Reels without watermark in full HD. Save videos, photos, highlights and carousels for free. No login required."
     };
 
     const faqSchema = {
