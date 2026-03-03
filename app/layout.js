@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   metadataBase: new URL('https://instasaver.co.in'),
   title: {
-    default: 'InstaSaver - Download Instagram Reels, Photos & Carousels Free',
+    default: 'InstaSaver - Download Instagram Reels, Photos, Highlights & Carousels Free',
     template: '%s | InstaSaver',
   },
   description:
-    'Download Instagram Reels, Photos, and Carousels in HD quality. Free, fast, no watermark, no login required. Best Instagram video downloader online.',
+    'Download Instagram Reels, Photos, Highlights, and Carousels in HD quality. Free, fast, no watermark, no login required. Best Instagram video downloader online.',
   keywords: [
     'instagram reel download',
     'download instagram reel',

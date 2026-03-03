@@ -67,7 +67,7 @@ export default function Home() {
     const getPlaceholder = () => {
         switch (activeTab) {
             case 'photos': return 'Paste Instagram Photo Link...';
-            case 'stories': return 'Paste Story Link (Coming Soon)...';
+            case 'highlights': return 'Paste Instagram Highlights Link...';
             default: return 'Paste Instagram Reel Link...';
         }
     };
@@ -89,7 +89,7 @@ export default function Home() {
                         <span className="gradient-text">Insta Saver</span>
                     </h1>
                     <p className="text-slate-400 text-lg">
-                        Download Instagram Reels, Photos & Carousels.
+                        Download Instagram Reels, Photos, Highlights & Carousels.
                         <br />Fast, free, and premium quality.
                     </p>
                 </div>
@@ -221,7 +221,7 @@ export default function Home() {
                                 <span className="transition group-open:rotate-180">▼</span>
                             </summary>
                             <div className="px-6 pb-6 text-slate-400">
-                                We support downloading Instagram Reels (video/MP4), Photos (JPG), and Carousel posts (multiple images). Stories support is coming soon!
+                                We support downloading Instagram Reels (video/MP4), Photos (JPG), Carousel posts (multiple images), and Highlights (saved stories). Paste any public Instagram link and download!
                             </div>
                         </details>
                     </div>

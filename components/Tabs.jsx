@@ -4,7 +4,7 @@ export default function Tabs({ activeTab, setActiveTab }) {
     const tabs = [
         { id: 'reels', label: 'Reels' },
         { id: 'photos', label: 'Photos' },
-        { id: 'stories', label: 'Stories' },
+        { id: 'highlights', label: 'Highlights' },
     ];
 
     return (

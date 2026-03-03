@@ -11,7 +11,7 @@ export default function JsonLd() {
             "price": "0",
             "priceCurrency": "USD"
         },
-        "description": "Download Instagram Reels, Photos, and Carousels in high quality without watermarks. Free online tool — no login required."
+        "description": "Download Instagram Reels, Photos, Highlights, and Carousels in high quality without watermarks. Free online tool — no login required."
     };
 
     const faqSchema = {
