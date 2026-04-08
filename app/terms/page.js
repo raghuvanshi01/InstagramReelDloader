@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
     title: 'Terms of Service',
     description:
-        'Read the terms of service for using InstaSaver, the free online Instagram Reel and Photo downloader.',
+        'Read the terms of service for using InstaSaver, the free online Instagram Reel, Story, and Photo downloader.',
     alternates: {
         canonical: 'https://instasaver.co.in/terms',
     },
@@ -37,7 +37,7 @@ export default function TermsPage() {
                         <h2 className="text-xl font-semibold text-white mb-3">2. Description of Service</h2>
                         <p>
                             InstaSaver is a free online tool that allows users to download publicly available Instagram Reels,
-                            Photos, and Carousel posts. The service acts as an intermediary that fetches media from public
+                            Stories, Photos, and Carousel posts. The service acts as an intermediary that fetches media from public
                             Instagram URLs provided by the user.
                         </p>
                     </section>

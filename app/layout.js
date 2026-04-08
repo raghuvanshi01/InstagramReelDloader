@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   metadataBase: new URL('https://instasaver.co.in'),
   title: {
-    default: 'Instagram Reels Downloader Without Watermark – Free HD Online Tool',
+    default: 'Instagram Reels & Stories Downloader Without Watermark – Free HD Online Tool',
     template: '%s | InstaSaver – Free Instagram Downloader',
   },
   description:
-    'Download Instagram Reels without watermark in full HD quality. Save Instagram videos, photos, highlights & carousels instantly. 100% free, no login, no signup. Fastest Instagram downloader online.',
+    'Download Instagram Reels & Stories without watermark in full HD quality. Save Instagram videos, stories, photos, highlights & carousels instantly. 100% free, no login, no signup. Fastest Instagram downloader online.',
   keywords: [
     'instagram reels downloader',
     'instagram reels downloader without watermark',
@@ -25,6 +25,12 @@ export const metadata = {
     'instagram photo download',
     'instagram highlights download',
     'instagram carousel download',
+    'instagram stories downloader',
+    'download instagram stories',
+    'instagram story download',
+    'save instagram stories',
+    'ig story saver',
+    'instagram story viewer download',
     'ig reel saver',
     'ig downloader',
     'insta saver',
@@ -39,14 +45,15 @@ export const metadata = {
     'free instagram video downloader',
     'instagram reels download app',
     'how to download instagram reels',
+    'how to download instagram stories',
     'instagram reel download without watermark free',
     'instagram downloader hd',
     'reel saver',
   ],
   openGraph: {
-    title: 'Instagram Reels Downloader Without Watermark – Free HD Tool',
+    title: 'Instagram Reels & Stories Downloader Without Watermark – Free HD Tool',
     description:
-      'Download Instagram Reels, Videos, Photos & Highlights in HD quality. No watermark, no login, 100% free. The fastest Instagram downloader online.',
+      'Download Instagram Reels, Stories, Videos, Photos & Highlights in HD quality. No watermark, no login, 100% free. The fastest Instagram downloader online.',
     type: 'website',
     url: 'https://instasaver.co.in',
     siteName: 'InstaSaver',
@@ -54,9 +61,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Instagram Reels Downloader – Free HD, No Watermark',
+    title: 'Instagram Reels & Stories Downloader – Free HD, No Watermark',
     description:
-      'Save Instagram Reels & Videos in HD without watermark. Free, fast, no login required. Try InstaSaver now!',
+      'Save Instagram Reels, Stories & Videos in HD without watermark. Free, fast, no login required. Try InstaSaver now!',
   },
   alternates: {
     canonical: 'https://instasaver.co.in',

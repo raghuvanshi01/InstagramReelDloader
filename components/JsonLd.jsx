@@ -2,7 +2,7 @@ export default function JsonLd() {
     const appSchema = {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "InstaSaver - Instagram Reels Downloader Without Watermark",
+        "name": "InstaSaver - Instagram Reels & Stories Downloader Without Watermark",
         "url": "https://instasaver.co.in",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Web",
@@ -11,7 +11,7 @@ export default function JsonLd() {
             "price": "0",
             "priceCurrency": "USD"
         },
-        "description": "Download Instagram Reels without watermark in full HD. Save videos, photos, highlights and carousels for free. No login required."
+        "description": "Download Instagram Reels & Stories without watermark in full HD. Save videos, stories, photos, highlights and carousels for free. No login required."
     };
 
     const faqSchema = {
@@ -31,7 +31,7 @@ export default function JsonLd() {
                 "name": "Is InstaSaver free to use?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, InstaSaver is 100% free to use. You can download unlimited Instagram Reels, Photos, and Carousels without any cost or signup."
+                    "text": "Yes, InstaSaver is 100% free to use. You can download unlimited Instagram Reels, Stories, Photos, and Carousels without any cost or signup."
                 }
             },
             {
@@ -64,6 +64,14 @@ export default function JsonLd() {
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "No, InstaSaver only supports downloading media from public Instagram accounts to respect user privacy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I download Instagram Stories?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! InstaSaver lets you download Instagram Stories from public accounts. Just paste the story link (instagram.com/stories/username/storyid) and click Download. Stories are available as long as they are still live on Instagram."
                 }
             }
         ]

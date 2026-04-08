@@ -68,6 +68,7 @@ export default function Home() {
         switch (activeTab) {
             case 'photos': return 'Paste Instagram Photo Link...';
             case 'highlights': return 'Paste Instagram Highlights Link...';
+            case 'stories': return 'Paste Instagram Story Link (instagram.com/stories/username)...';
             default: return 'Paste Instagram Reel Link...';
         }
     };
@@ -86,11 +87,11 @@ export default function Home() {
             <div className="z-10 w-full max-w-2xl items-center justify-between font-mono text-sm flex-col">
                 <div className="text-center mb-12">
                     <h1 className="text-5xl font-bold mb-4 tracking-tight drop-shadow-lg">
-                        <span className="gradient-text">Instagram Reels Downloader</span>
+                        <span className="gradient-text">Instagram Downloader</span>
                     </h1>
                     <p className="text-slate-400 text-lg">
-                        Download Instagram Reels without watermark in HD quality.
-                        <br />Free, fast, no login required. Save Reels, Photos, Highlights & Carousels.
+                        Download Instagram Reels, Stories & Photos without watermark in HD quality.
+                        <br />Free, fast, no login required. Save Reels, Stories, Photos, Highlights & Carousels.
                     </p>
                 </div>
 
@@ -124,7 +125,7 @@ export default function Home() {
                             ) : (
                                 <>
                                     <Download className="w-5 h-5" />
-                                    Download {activeTab === 'photos' ? 'Photo' : 'Video'}
+                                    Download {activeTab === 'photos' ? 'Photo' : activeTab === 'stories' ? 'Story' : 'Video'}
                                 </>
                             )}
                         </button>
@@ -144,14 +145,14 @@ export default function Home() {
             {/* SEO Content Section */}
             <section className="w-full max-w-4xl mt-24 text-slate-300">
                 <h2 className="text-3xl font-bold mb-8 text-center drop-shadow-lg text-white">
-                    How to Download <span className="gradient-text">Instagram Reels & Photos</span>
+                    How to Download <span className="gradient-text">Instagram Reels, Stories & Photos</span>
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                     <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm shadow-xl">
                         <div className="bg-violet-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-violet-400 font-bold text-xl shadow-inner">1</div>
                         <h3 className="text-xl font-semibold text-white mb-2 drop-shadow-md">Copy Link</h3>
-                        <p className="text-slate-200">Open Instagram, find the Reel or Photo you want to save, click the three dots/share icon and select "Copy Link".</p>
+                        <p className="text-slate-200">Open Instagram, find the Reel, Story, or Photo you want to save, click the three dots/share icon and select "Copy Link". For Stories, copy the story link from the browser or share menu.</p>
                     </div>
                     <div className="bg-black/60 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm shadow-xl">
                         <div className="bg-pink-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-pink-400 font-bold text-xl shadow-inner">2</div>
@@ -176,7 +177,7 @@ export default function Home() {
                                 <span className="transition group-open:rotate-180">▼</span>
                             </summary>
                             <div className="px-6 pb-6 text-slate-400">
-                                Yes, InstaSaver is completely free to use. You can download as many Reels and Photos as you like without any cost.
+                                Yes, InstaSaver is completely free to use. You can download as many Reels, Stories, and Photos as you like without any cost.
                             </div>
                         </details>
                         <details className="group bg-black/60 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
@@ -221,7 +222,7 @@ export default function Home() {
                                 <span className="transition group-open:rotate-180">▼</span>
                             </summary>
                             <div className="px-6 pb-6 text-slate-400">
-                                We support downloading Instagram Reels (video/MP4), Photos (JPG), Carousel posts (multiple images), and Highlights (saved stories). Paste any public Instagram link and download!
+                                We support downloading Instagram Reels (video/MP4), Stories (video/image), Photos (JPG), Carousel posts (multiple images), and Highlights (saved stories). Paste any public Instagram link and download!
                             </div>
                         </details>
                     </div>

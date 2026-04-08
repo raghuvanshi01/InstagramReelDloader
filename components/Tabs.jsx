@@ -5,6 +5,7 @@ export default function Tabs({ activeTab, setActiveTab }) {
         { id: 'reels', label: 'Reels' },
         { id: 'photos', label: 'Photos' },
         { id: 'highlights', label: 'Highlights' },
+        { id: 'stories', label: 'Stories' },
     ];
 
     return (

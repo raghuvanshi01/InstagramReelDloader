@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
     title: 'Frequently Asked Questions',
     description:
-        'Find answers to common questions about InstaSaver — how to download Instagram Reels, supported formats, privacy, and more.',
+        'Find answers to common questions about InstaSaver — how to download Instagram Reels, Stories, supported formats, privacy, and more.',
     alternates: {
         canonical: 'https://instasaver.co.in/faq',
     },
@@ -36,7 +36,11 @@ const faqs = [
     },
     {
         question: 'What media types can I download?',
-        answer: 'You can download Instagram Reels (MP4 video), Photos (JPG/PNG), and Carousel posts (multiple images). Stories support is coming soon.',
+        answer: 'You can download Instagram Reels (MP4 video), Stories (video/image), Photos (JPG/PNG), and Carousel posts (multiple images).',
+    },
+    {
+        question: 'How do I download Instagram Stories?',
+        answer: 'Go to the Instagram profile whose story you want to save, open the story, and copy the story link from your browser or the share menu. Paste it into InstaSaver with the Stories tab selected, and click Download. Note: only stories from public accounts can be downloaded, and they must still be live (not expired).',
     },
     {
         question: 'What quality are the downloads?',
@@ -70,7 +74,7 @@ export default function FAQPage() {
                         <span className="gradient-text">Frequently Asked Questions</span>
                     </h1>
                     <p className="text-slate-400 text-lg">
-                        Everything you need to know about downloading Instagram Reels with InstaSaver.
+                        Everything you need to know about downloading Instagram Reels & Stories with InstaSaver.
                     </p>
                 </div>
 
